@@ -1,49 +1,262 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/moon.css" />
+    <link rel="stylesheet" href="lib/css/custom.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="u-align-left">
+          <h1>The Almighty JAMstack</h1>
+          <p>Jamie Bradley</p>
+          <small>@jamiebradley234 / https://jamiebradley.dev</small>
+        </section>
 
-		<script src="js/reveal.js"></script>
+        <section class="u-align-left">
+          <h2>Who is this guy?</h2>
+          <ul>
+            <li class="fragment fade-in">UI Engineer</li>
+            <li class="fragment fade-in">Founder of Endeavour Digital</li>
+            <li class="fragment fade-in">
+              Other Half of Middlesbrough Front End
+            </li>
+            <li class="fragment fade-in">Huge fan of JAMstack!</li>
+          </ul>
+        </section>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+        <section class="u-align-left">
+          <h2>Tonight Matthew...</h2>
+          <ul>
+            <li class="fragment fade-in">What is JAMstack?</li>
+            <li class="fragment fade-in">Advantages/Disadvantages</li>
+            <li class="fragment fade-in">Examples of JAMstack</li>
+            <li class="fragment fade-in">How to Get Started with JAMstack</li>
+          </ul>
+        </section>
+
+        <section class="u-align-left">
+          <h1>What is JAMstack?</h1>
+        </section>
+
+        <section class="u-align-left">
+          <h3>What is JAMstack</h3>
+
+          <p>
+            <q cite="https://jamstack.org">
+              A modern architecture —<br />Create fast and secure sites and
+              dynamic apps with <strong>J</strong>avaScript,
+              <strong>A</strong>PIs, and prerendered <strong>M</strong>arkup,
+              <u>served without web servers</u>.
+            </q>
+          </p>
+
+          <small>https://jamstack.org</small>
+        </section>
+
+        <section class="u-align-let">
+          <h1>JAM<span class="u-opacity-half">stack</span></h1>
+        </section>
+
+        <section class="u-align-left">
+          <h2>"...Served Without Web Servers"</h2>
+        </section>
+
+        <section
+          data-background-image="https://media.giphy.com/media/12NUbkX6p4xOO4/source.gif"
+        ></section>
+
+        <section class="u-align-left">
+          <h3>Served Without Webservers</h3>
+
+          <ul>
+            <li class="fragment fade-in">
+              Web Apps/Websites are Hosted on a Global CDN
+            </li>
+            <li class="fragment fade-in">
+              Not managing a dedicated Web Server(s)
+            </li>
+            <li class="fragment fade-in">
+              Content is immediately distributed to the user
+            </li>
+            <li class="fragment fade-in">
+              What about server side API requests?
+            </li>
+            <ul class="fragment fade-in">
+              <li>Serverless functions (Functions As A Service)</li>
+              <li>So long dedicated API Proxy!</li>
+            </ul>
+          </ul>
+        </section>
+
+        <section class="u-align-left">
+          <h3>Example: Basic* Traditional WordPress Build</h3>
+          <p>Basic WordPress Example</p>
+
+          <small
+            >*Very basic. Imagine a family member has installed WordPress
+            through CPanel</small
+          >
+        </section>
+
+        <section class="u-align-left">
+          <h2>The Good</h2>
+
+          <ul>
+            <li class="fragment fade-in">Content Managed Website</li>
+            <li class="fragment fade-in">Instant Feedback</li>
+            <li class="fragment fade-in">Huge array of Plugins</li>
+          </ul>
+        </section>
+
+        <section class="u-align-left">
+          <h2>The Not So Good</h2>
+
+          <ul>
+            <li class="fragment fade-in">Content retrieved at runtime</li>
+            <li class="fragment fade-in">Bigger surface area of attack</li>
+            <li class="fragment fade-in">
+              The more data we have the slower the page load
+            </li>
+            <li class="fragment fade-in">
+              Those shiny plugins can feck up the site
+            </li>
+            <li class="fragment fade-in">Cost more money to scale</li>
+            <ul class="fragment fade-in">
+              <li>Provision more servers</li>
+              <li>Introduce load balancers</li>
+              <li>Move assets to a CDN</li>
+            </ul>
+            <li class="fragment fade-in">It could be simplified</li>
+          </ul>
+        </section>
+
+        <section class="u-align-left">
+          <h2>So what we gonna do?</h2>
+        </section>
+
+        <section class="u-align-left">
+          <h2>We're gonna turn to the browser</h2>
+        </section>
+
+        <section class="u-align-let">
+          <section>
+            <h1>JAM<span class="u-opacity-half">stack</span></h1>
+          </section>
+
+          <section class="u-align-left">
+            <h2>JavaScript</h2>
+
+            <ul class="fragment fade-in">
+              <li>
+                Dynamic programming during the request/response cycle is handled
+                by JavaScript
+              </li>
+              <li>Frameworks: React, Angular, Vue etc</li>
+              <li>Vanilla JavaScript</li>
+            </ul>
+
+            <ul class="fragment fade-in">
+              <li>Routing</li>
+              <li>UI Logic</li>
+              <li>Powerful functionality</li>
+            </ul>
+          </section>
+
+          <section class="u-align-left">
+            <h2>API's</h2>
+
+            <ul class="fragment fade-in">
+              <li>
+                Server-side processes or database actions are abstracted into
+                reusable APIs, accessed over HTTPS with JavaScript.
+              </li>
+            </ul>
+
+            <ul class="fragment fade-in">
+              <li>
+                Leveraging third-party services: Fetching Content
+                (Contentful/Sanity), Handling Payments (Stripe)
+              </li>
+              <li>
+                Custom-build services: User Authentication, Product Inventory
+              </li>
+            </ul>
+          </section>
+
+          <section class="u-align-left">
+            <h2>Markup</h2>
+
+            <ul class="fragment fade-in">
+              <li>
+                Templated markup should be prebuilt at deploy time, usually using a site generator
+                for content sites, or a build tool for web apps.
+              </li>
+            </ul>
+
+            <ul class="fragment fade-in">
+              <li>
+                Headless CMS
+                  <ul>
+                    <li>Sanity</li>
+                    <li>Contentful</li>
+                    <li>Prismic</li>
+                    <li>Forestry</li>
+                    <li>Ghost</li>
+                  </ul>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section class="u-align-left">
+            <h2>Better Performance</h2>
+          </section>
+
+          <section class="u-align-left">
+            <h2>More Secure</h2>
+          </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+  </body>
 </html>
