@@ -8,3 +8,9 @@
 .u-opacity-half {
   opacity: .5;
 }
+
+.u-no-img-highlight.u-no-img-highlight {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
