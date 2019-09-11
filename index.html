@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>reveal.js</title>
+    <title>The Almighty JAMstack</title>
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/reveal.css" />
@@ -31,16 +31,23 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section class="u-align-left">
+        <section
+          class="u-align-right"
+          data-background-image="/lib/img/main-image.jpg"
+        >
           <h1>The Almighty JAMstack</h1>
-          <p>Jamie Bradley</p>
-          <small>@jamiebradley234<br />https://jamiebradley.dev</small>
+          <p>
+            Jamie Bradley<br />
+            <small>@jamiebradley234</small>
+          </p>
+          <small>https://jamiebradley.dev<br />https://endeavour.digital</small>
         </section>
 
         <section class="u-align-left">
-          <h2>Who is this guy?</h2>
+          <h2>Hello!</h2>
           <ul>
             <li class="fragment fade-in">UI Engineer</li>
+            <li class="fragment fade-in">Failed Musician</li>
             <li class="fragment fade-in">Founder of Endeavour Digital</li>
             <li class="fragment fade-in">Huge fan of JAMstack!</li>
           </ul>
@@ -138,14 +145,20 @@
               Not managing a dedicated Web Server(s)
             </li>
             <li class="fragment fade-in">
-              What about server side API requests?
-            </li>
-            <ul class="fragment fade-in">
-              <li>Serverless functions (Functions As A Service)</li>
-              <li>So long dedicated API Proxy!</li>
-            </ul>
-            <li class="fragment fade-in">
               Content is immediately distributed to the user
+              <ul>
+                <li>
+                  No server side rendering to generate dynamic content at
+                  runtime
+                </li>
+              </ul>
+            </li>
+            <li class="fragment fade-in">
+              What about server side API requests?
+              <ul>
+                <li>Serverless functions (Functions As A Service)</li>
+                <li>So long dedicated API Proxy!</li>
+              </ul>
             </li>
           </ul>
 
@@ -201,26 +214,31 @@
         </section>
 
         <section class="u-align-left">
-          <h2>So what we gonna do?</h2>
+          <h2>What's the alternative?</h2>
         </section>
 
         <section class="u-align-left">
           <h2>We're gonna turn to the browser and abstract the UI Layer</h2>
         </section>
 
-        <section class="u-align-left">
+        <section
+          class="u-align-left"
+          data-background-image="/lib/img/iphone.jpg"
+        >
           <h2>Nothing new here. Think of the iPhone</h2>
 
-          <ul class="fragment fade-in">
-            <li>Imagine a mobile app where UI is reloaded from a server each time an action was taken</li>
-            <li>Unperformant</li>
+          <ul class="c-list--white">
+            <li>
+              Imagine a mobile app where UI is reloaded from a server each time
+              an action was taken
+            </li>
             <li>Why not treat Web Apps in the same way?</li>
           </ul>
 
           <aside class="notes" data-markdown>
-            - Nothing particularly new with this approach
-            - Monolithic applications would never work with iPhones.
-            - Imagine a mobile app where UI is reloaded from a server each time an action was taken
+            - Nothing particularly new with this approach - Monolithic
+            applications would never work with iPhones. - Imagine a mobile app
+            where UI is reloaded from a server each time an action was taken
           </aside>
         </section>
 
@@ -319,76 +337,7 @@
         </section>
 
         <section>
-          <h2>Abstracting the Front End Layer gives us some added benefits</h2>
-        </section>
-
-        <section>
-          <h2>Better Performance</h2>
-
-          <aside class="notes" data-markdown>
-            We have taken away the dependency of data at run time. Therefore we
-            get what we need immediately. So we're still getting dynamic
-            content, it's just the magic has happened before the user requests
-            it. Making page load speeds much faster.
-          </aside>
-        </section>
-
-        <section>
-          <h2>More Secure</h2>
-
-          <aside class="notes" data-markdown>
-            There's reduced attack vectors. This is because we are serving
-            pre-compiled HTML, with all the content we need, there's no direct
-            path into the database via the front end layer. It's separate.
-          </aside>
-        </section>
-
-        <section>
-          <h2>How are we going to host it?</h2>
-        </section>
-
-        <section class="u-align-left">
-          <h2>How are we going to host it?</h2>
-          <ul>
-            <li>Content Delivery Network (CDN) - no web servers</li>
-            <li class="fragment fade-in">
-              Do we have to manually publish code/content changes?
-            </li>
-            <li class="fragment fade-in">What about automated deployments?</li>
-            <li class="fragment fade-in">
-              Wouldn't it be awesome if we could have automatic HTTPS?
-            </li>
-            <li class="fragment fade-in">
-              Can we incorporate this into our GIT repos?
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h1>
-            <span role="img">😎</span><br />
-            Abso-feckin-lutely
-          </h1>
-        </section>
-
-        <section>
-          <img
-            src="/lib/img/full-logo-dark.svg"
-            alt="Netlify Logo"
-            width="450"
-            class="u-no-img-highlight"
-          />
-        </section>
-
-        <section>
-          <h2>
-            Netlify simplifies dev ops for folks like me who just want to focus
-            on Front End code.
-          </h2>
-        </section>
-
-        <section>
-          <h2>Examples (Pretty Diagrams)</h2>
+          <h1>How do we do it?</h1>
         </section>
 
         <section data-background="#000">
@@ -464,6 +413,81 @@
           <aside class="notes" data-markdown>
             https://www.staticgen.com
           </aside>
+        </section>
+
+        <section>
+          <h2>Abstracting the Front End Layer gives us some added benefits</h2>
+        </section>
+
+        <section>
+          <h2>Better Performance</h2>
+
+          <aside class="notes" data-markdown>
+            We have taken away the dependency of data at run time. Therefore we
+            get what we need immediately. So we're still getting dynamic
+            content, it's just the magic has happened before the user requests
+            it. Making page load speeds much faster.
+          </aside>
+        </section>
+
+        <section>
+          <h2>More Secure</h2>
+
+          <aside class="notes" data-markdown>
+            There's reduced attack vectors. This is because we are serving
+            pre-compiled HTML, with all the content we need, there's no direct
+            path into the database via the front end layer. It's separate.
+          </aside>
+        </section>
+
+        <section>
+          <h1>How are we going to host it?</h1>
+        </section>
+
+        <section class="u-align-left">
+          <h2>How are we going to host it?</h2>
+          <ul>
+            <li>Content Delivery Network (CDN) - no web servers</li>
+            <li>
+              <strike>Manually publish</strike> Automatically publish
+              code/content changes
+            </li>
+            <li>
+              Automatic HTTPS upon initial deployment
+            </li>
+            <li>
+              Incorporated within our GIT workflow
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>
+            Is there a service that can do all that?
+          </h1>
+        </section>
+
+        <section>
+          <h1>
+            <span role="img">😎</span><br />
+            Abso-feckin-lutely
+          </h1>
+        </section>
+
+        <section>
+          <img
+            src="/lib/img/full-logo-dark.svg"
+            alt="Netlify Logo"
+            width="450"
+            class="u-no-img-highlight"
+          />
+        </section>
+
+        <section>
+          <h2>
+            Netlify simplifies dev ops for folks like me who just want to focus
+            on Front End code.
+          </h2>
         </section>
 
         <section>

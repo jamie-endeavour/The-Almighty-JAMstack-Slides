@@ -5,6 +5,10 @@
   text-align: left;
 }
 
+.u-align-right {
+  text-align: right;
+}
+
 .u-opacity-half {
   opacity: .5;
 }
@@ -22,4 +26,11 @@
 
 .u-colour-white {
   color: #fff;
+}
+
+/**
+ * Component Styles
+ */
+.c-list--white li {
+  color: rgba(255, 255, 255, .9);
 }
